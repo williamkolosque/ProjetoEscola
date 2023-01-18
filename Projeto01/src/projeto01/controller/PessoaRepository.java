@@ -1,4 +1,16 @@
 package projeto01.controller;
 
-public interface PessoaRepository {
+import projeto01.entidades.Aluno;
+import projeto01.entidades.Pessoa;
+
+public interface PessoaRepository{
+
+void listarAluno();
+
+void cadastrarAluno();
+
+
+
+
+
 }

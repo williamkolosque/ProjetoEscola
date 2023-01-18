@@ -11,6 +11,10 @@ public class Aluno extends Pessoa {
         this.mensalidade = mensalidade;
     }
 
+    public Aluno() {
+
+    }
+
     public double getMensalidade() {
         return mensalidade;
     }
@@ -20,9 +24,10 @@ public class Aluno extends Pessoa {
     }
 
     @Override
-    public String toString() {
-        return "Aluno{" +
-                "mensalidade=" + mensalidade +
-                '}';
+    public void visualizar() {
+        System.out.println();
+        super.visualizar();
+        System.out.println("Mensalidade: " + mensalidade);
+
     }
 }

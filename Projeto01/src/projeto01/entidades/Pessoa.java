@@ -1,19 +1,23 @@
 package projeto01.entidades;
 
-public class Pessoa {
+public abstract class Pessoa {
 
    private int id;
    private String nome;
-   private int Idade;
-   private String Sexo;
+   private int idade;
+   private String sexo;
    private String curso;
 
     public Pessoa(int id, String nome, int idade, String sexo, String curso) {
         this.id = id;
         this.nome = nome;
-        Idade = idade;
-        Sexo = sexo;
+        this.idade = idade;
+        this.sexo = sexo;
         this.curso = curso;
+    }
+
+    public Pessoa(){
+
     }
 
     public int getId() {
@@ -33,19 +37,19 @@ public class Pessoa {
     }
 
     public int getIdade() {
-        return Idade;
+        return idade;
     }
 
     public void setIdade(int idade) {
-        Idade = idade;
+        this.idade = idade;
     }
 
     public String getSexo() {
-        return Sexo;
+        return sexo;
     }
 
     public void setSexo(String sexo) {
-        Sexo = sexo;
+        this.sexo = sexo;
     }
 
     public String getCurso() {
@@ -56,14 +60,11 @@ public class Pessoa {
         this.curso = curso;
     }
 
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", Idade=" + Idade +
-                ", Sexo='" + Sexo + '\'' +
-                ", curso='" + curso + '\'' +
-                '}';
+    public void visualizar(){
+        System.out.println("Id: " + id);
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: "+idade);
+        System.out.println("Sexo: "+sexo);
+        System.out.println("Curso: " + curso);
     }
 }

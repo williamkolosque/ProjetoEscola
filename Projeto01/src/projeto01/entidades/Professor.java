@@ -19,9 +19,9 @@ public class Professor extends Pessoa {
     }
 
     @Override
-    public String toString() {
-        return "Professor{" +
-                "salario=" + salario +
-                '}';
+    public void visualizar() {
+        System.out.println();
+        super.visualizar();
+        System.out.println("Salário: " + salario);
     }
 }

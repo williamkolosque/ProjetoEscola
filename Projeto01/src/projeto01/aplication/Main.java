@@ -8,7 +8,7 @@ public class Main {
 
         Aluno a1 = new Aluno(1,"João", 18, "Masculino", "Informatica",500);
 
-        System.out.println(a1);
+        a1.visualizar();
 
 
     }
