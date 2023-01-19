@@ -5,14 +5,12 @@ public abstract class Pessoa {
    private int id;
    private String nome;
    private int idade;
-   private String sexo;
    private String curso;
 
-    public Pessoa(int id, String nome, int idade, String sexo, String curso) {
+    public Pessoa(int id, String nome, int idade, String curso) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
-        this.sexo = sexo;
         this.curso = curso;
     }
 
@@ -44,13 +42,6 @@ public abstract class Pessoa {
         this.idade = idade;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
 
     public String getCurso() {
         return curso;
@@ -61,10 +52,9 @@ public abstract class Pessoa {
     }
 
     public void visualizar(){
-        System.out.println("Id: " + id);
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: "+idade);
-        System.out.println("Sexo: "+sexo);
-        System.out.println("Curso: " + curso);
+        System.out.println("Id: " + getId());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Idade: "+getIdade());
+        System.out.println("Curso: " + getCurso());
     }
 }

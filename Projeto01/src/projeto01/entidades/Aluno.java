@@ -2,12 +2,14 @@ package projeto01.entidades;
 
 import projeto01.entidades.Pessoa;
 
+import java.util.ArrayList;
+
 public class Aluno extends Pessoa {
 
     private double mensalidade;
 
-    public Aluno(int id, String nome, int idade, String sexo, String curso, double mensalidade) {
-        super(id, nome, idade, sexo, curso);
+    public Aluno(int id, String nome, int idade, String curso, double mensalidade) {
+        super(id, nome, idade, curso);
         this.mensalidade = mensalidade;
     }
 
@@ -27,7 +29,9 @@ public class Aluno extends Pessoa {
     public void visualizar() {
         System.out.println();
         super.visualizar();
-        System.out.println("Mensalidade: " + mensalidade);
+        System.out.println("Mensalidade: " + getMensalidade());
 
     }
+
+
 }

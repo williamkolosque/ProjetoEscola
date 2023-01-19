@@ -3,18 +3,22 @@ package projeto01.entidades;
 public class Professor extends Pessoa {
 
 
-   private int salario;
+   private double salario;
 
-    public Professor(int id, String nome, int idade, String sexo, String curso, int salario) {
-        super(id, nome, idade, sexo, curso);
+    public Professor(int id, String nome, int idade, String curso, double salario) {
+        super(id, nome, idade, curso);
         this.salario = salario;
     }
 
-    public int getSalario() {
+    public Professor(){
+
+    }
+
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(int salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
