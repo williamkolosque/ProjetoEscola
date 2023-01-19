@@ -5,6 +5,7 @@ import projeto01.entidades.Aluno;
 import projeto01.entidades.Professor;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public class ProfessorService {
 
         public void inicial(Scanner sc) {
             while (system) {
+                System.out.println(" ");
                 System.out.println("--------------------------------");
                 System.out.println(" Você está em: MODULO DO PROFESSOR  ");
                 System.out.println(" O que deseja fazer?");
@@ -26,8 +28,21 @@ public class ProfessorService {
                 System.out.println("2 - Listar todos");
                 System.out.println("--------------------------------");
                 System.out.print("Digite uma opção: ");
-                int action = sc.nextInt();
+                int action = 3;
 
+                try {
+
+                    action = sc.nextInt();
+
+                }catch (InputMismatchException e){
+
+                    System.out.println("Digite um número");
+                    System.out.println("O sistema só aceita números!");
+                    sc.nextLine();
+                    action =3;
+
+                }
+              if(action>0 || action<=2){
                 switch(action){
                     case 1:
                         cadastrar(sc);
@@ -43,6 +58,12 @@ public class ProfessorService {
                         break;
                 }
             }
+              if(action>=3){
+                  System.out.println("ERRO: DIGITE UMA OPÇÃO VALIDA");
+                  System.out.println(" ");
+              }
+            }
+
         }
 
         public void cadastrar(Scanner sc) {
@@ -74,6 +95,7 @@ public class ProfessorService {
 
                 System.out.println();
                 System.out.println("Cadastro realizado com sucesso!");
+                System.out.println(" ");
                 System.out.println();
             }
         }
